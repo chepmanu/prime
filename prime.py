@@ -1,14 +1,14 @@
 def is_prime(n):
-    t = True 
-    for i in range(2, n):
-       if n%i == 0:
-           t = False
-           break # ends the for loop
-       # no else block because it does nothing ...
+    numbers = []
+    if n < 2:
+        return
 
+    def check_prime(number):
+        for i in range(2, number):
+            if not number%i:
+                return
+        numbers.append(number)
+    for x in range (2, n + 1):
+        check_prime(x)
 
-    if t:
-        print "prime"
-    else:
-        print "not prime"
-is_prime(63)		
+    return numbers
