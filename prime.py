@@ -1,12 +1,14 @@
 def is_prime(n):
     numbers = []
-    int(n)
-    if not str(n).isdigit:
+    if not str(n).isdigit():
+        #To check if n is an interger and if not to raise ValueError.
         raise ValueError("Input should be a number")
+        
     if n < 2:
         raise ValueError("There is no prime number less that 2")
 
     def check_prime(number):
+        #To check if the number in range is prime and add it to a list if it is.
         for i in range(2, number):
             if not number%i:
                 return
@@ -15,4 +17,3 @@ def is_prime(n):
         check_prime(x)
 
     return numbers
-print is_prime(2)

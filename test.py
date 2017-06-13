@@ -1,14 +1,15 @@
 import unittest
-import time
 from prime import is_prime
 
 class TestPrimeFunction(unittest.TestCase):
 
 	def test_zero_to_ten(self):
+		#To check for the prime numbers between one and ten.
 		numbers = is_prime(10)
 		self.assertEqual(numbers, [2,3,5,7])
 
 	def test_n_is_zero(self):
+
 
 		with self.assertRaises(ValueError) as context:
 			is_prime(0)
